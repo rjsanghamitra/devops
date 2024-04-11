@@ -7,6 +7,8 @@ COPY public/ /tempapp/public
 COPY src/ /tempapp/src
 COPY package.json /tempapp/package.json
 
+EXPOSE 5173
+
 RUN npm install
 
 # command that will be run first after starting the container

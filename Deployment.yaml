@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tempapp-deployment
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: tempapp
+  template:
+    metadata:
+      labels:
+        app: tempapp
+    spec:
+      containers:
+        - name: tempapp-container
+          image: sanghamitra2003/tempapp:0.1
+          ports:
+            - containerPort: 5173
